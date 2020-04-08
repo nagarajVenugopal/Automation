@@ -19,7 +19,7 @@ formatter.feature({
   ]
 });
 formatter.before({
-  "duration": 1279791000,
+  "duration": 20784097900,
   "status": "passed"
 });
 formatter.scenario({
@@ -60,7 +60,7 @@ formatter.match({
   "location": "Search.user_already_login_to_Amazon_app()"
 });
 formatter.result({
-  "duration": 46324873600,
+  "duration": 32925153700,
   "status": "passed"
 });
 formatter.match({
@@ -73,21 +73,21 @@ formatter.match({
   "location": "Search.enter_Product_name_in_Search_Box(String)"
 });
 formatter.result({
-  "duration": 27856632800,
+  "duration": 27712198200,
   "status": "passed"
 });
 formatter.match({
   "location": "Search.click_on_Search_in_Search_page()"
 });
 formatter.result({
-  "duration": 685443000,
+  "duration": 164666200,
   "status": "passed"
 });
 formatter.match({
   "location": "Search.user_scroll_to_the_mid_of_the_product()"
 });
 formatter.result({
-  "duration": 7438673400,
+  "duration": 22273093600,
   "status": "passed"
 });
 });

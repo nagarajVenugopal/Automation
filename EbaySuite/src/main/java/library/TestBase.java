@@ -74,7 +74,7 @@ public class TestBase {
 		
 		caps.setCapability("waitForIdleTimeout", 2000);
 		 caps.setCapability("disableWindowAnimation", true);
-		
+		 
 		 
 		 /*
 		  * Invoking App using App Package name and Activity Name
@@ -84,7 +84,7 @@ public class TestBase {
 		caps.setCapability("appPackage", "com.amazon.mShop.android.shopping");
 		caps.setCapability("appActivity", "com.amazon.mShop.home.HomeActivity");
 		caps.setCapability("noReset", "false");
-
+		
 
 	 
 	 
@@ -109,7 +109,7 @@ public class TestBase {
 		    	propertyObj.loadPropertyFile(Project_Location+"\\src\\main\\java\\Resources\\Application.properties");
 		    	getLoginUserDetails();
 		    			    	
-		    	objectRepository.loadPropertyFile(propertyObj.getProperty("Pagelocators"));
+		    	objectRepository.loadPropertyFile(propertyObj.getProperty("Locator_Path"));
 				
 		    	
 		    	

@@ -75,12 +75,15 @@ if(driver.findElement(By.id(objectRepository.getObjectPropertyValue("HomePage_La
 		
 		
 		log.info("Enter UserName and Password into application");
-		driver.findElement(By.id(objectRepository.getObjectPropertyValue("Username_TextBox"))).sendKeys(objectRepository.getObjectPropertyValue("Username_Value"));// Enter Username
+		driver.findElement(By.id(objectRepository.getObjectPropertyValue("Username_TextBox"))).sendKeys(objectRepository.getObjectPropertyValue("Username_Value"));
+		// Enter Username
 		wait.waitForGivenTime(15);
 		
 		driver.findElement(By.xpath(objectRepository.getObjectPropertyValue("Username_Button"))).click();
 		
 		wait.waitForGivenTime(10);
+		driver.findElement(By.xpath(objectRepository.getObjectPropertyValue("Password_TextBox"))).clear();
+		wait.waitForGivenTime(3);
 		driver.findElement(By.xpath(objectRepository.getObjectPropertyValue("Password_TextBox"))).sendKeys(objectRepository.getObjectPropertyValue("Password_Value"));// Enter Password
 		driver.findElement(By.xpath(objectRepository.getObjectPropertyValue("Password_Button"))).click();
 		wait.waitForGivenTime(30);
@@ -199,10 +202,13 @@ if(driver.findElement(By.id(objectRepository.getObjectPropertyValue("HomePage_La
  
  
  }
+ wait.waitForGivenTime(20);
  driver.findElement(By.xpath(objectRepository.getObjectPropertyValue("Mid_ProductName_Image_Click"))).click();
 
- 
- 
+ wait.waitForGivenTime(20);
+ if (driver.findElement(By.xpath(objectRepository.getObjectPropertyValue("Close_Popup"))).isDisplayed())
+		driver.findElement(By.xpath(objectRepository.getObjectPropertyValue("Close_Popup"))).click();
+
 
  /*
   * Change Screen Orientation
@@ -210,6 +216,7 @@ if(driver.findElement(By.id(objectRepository.getObjectPropertyValue("HomePage_La
   */
  wait.waitForGivenTime(20);
  ScreenOrientation sr=driver.getOrientation();
+ 
  driver.rotate(sr.LANDSCAPE);
  
  wait.waitForGivenTime(20);

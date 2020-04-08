@@ -49,7 +49,7 @@ public class Login extends TestBase{
 @Given("^User login to Amazon app$")
 public void user_login_to_Amazon_app() throws Throwable {
   
-	
+	driver.resetInputState();
 	wait.waitForGivenTime(30);
 	log.info("User is log into application");
 	if (driver.findElement(By.xpath(objectRepository.getObjectPropertyValue("Sign_In_Button"))).isDisplayed())

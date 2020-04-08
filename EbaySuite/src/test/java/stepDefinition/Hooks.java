@@ -16,7 +16,7 @@ public class Hooks extends TestBase{
 	private AppiumSetUp appium;
 	public Hooks() throws MalformedURLException {
 		log = new Log(Hooks.class);
-		appium = new AppiumSetUp();
+		//appium = new AppiumSetUp();
 		// TODO Auto-generated constructor stub
 	}
 
